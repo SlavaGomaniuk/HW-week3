@@ -2,6 +2,12 @@
   --main-color: #01bbf0;
   --main-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   --second-color: #d2e3f7;
+  --fontfamily-header: "Playfair Display", serif;
+  --fontfamily-p: "Poppins", sans-serif;
+}
+body {
+  font-family: var(--fontfamily-p);
+  margin-top: 100px;
 }
 h1,
 h2,
@@ -10,40 +16,48 @@ h3 {
 }
 h1 {
   font-size: 86px;
+  font-family: var(--fontfamily-header);
+  font-weight: 700;
+  line-height: 64px;
 }
-h2 {
+.hero h2 {
   font-size: 44px;
+  font-family: var(--fontfamily-p);
+  font-weight: 600;
+  line-height: 64px;
 }
 h3 {
   font-size: 32px;
   opacity: 0.7;
 }
-body {
-  margin-top: 100px;
-  max-width: ;
+.description h2 {
+  font-family: var(--fontfamily-header);
+  font-weight: 700;
+  line-height: 54px;
+}
+.description p {
+  opacity: 0.7;
+  line-height: 28px;
 }
 div.buttons {
   display: flex;
   justify-content: center;
 }
 div.buttonsLaunch {
-  display: flex;
-  margin-bottom: ;
 }
 .contact,
 .about {
-  padding: 35px;
+  padding: 20px 35px;
   border: 1px solid var(--main-color);
   text-decoration: none;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 16px;
   box-shadow: var(--main-shadow);
   margin: 55px 10px;
 }
 
 .contact {
   border-radius: 10% 0 0 10%;
-  margin-right: ;
   background-color: var(--main-color);
   color: white;
 }
@@ -107,4 +121,22 @@ p.secondCol {
 .imageN:hover {
   border: 5px solid var(--second-color) !important;
   box-shadow: unset;
+}
+@media (max-width: 960px) {
+  h1 {
+    font-size: 60px;
+  }
+  .hero h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .description {
+    text-align: center;
+  }
+  .about-page {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
